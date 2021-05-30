@@ -12,6 +12,7 @@ import WindDown from '../../form/WindDown';
 import Pzzzownality from '../../form/Pzzzownality';
 import Confirmation from '../../form/Confirmation';
 import Celebrate from '../../form/Celebrate';
+import { newUser } from '../../utils/newUser';
 
 import useInput from '../../hooks/useInput'
 
@@ -23,9 +24,9 @@ export default function App() {
   const [userName, setUserName] = useInput('');
   const [phoneNumber, setPhoneNumber] = useInput('');
   const [wakeUpTime, setWakeUpTime] = useInput('');
-  const [sleepLength, setSleepLength] = useInput(8);
-  const [windDownTime, setWindDownTime] = useInput('');
-  const [personality, setPersonality] = useInput('');
+  const [sleepLength, setSleepLength] = useInput('8');
+  const [windDownTime, setWindDownTime] = useInput('90');
+  const [personality, setPersonality] = useInput('sassy');
 
   // click handlers --- possibly unneded
   const handleSubmit = (e) => {
