@@ -5,7 +5,7 @@ const LandingPage = () => {
   const history = useHistory();
 
   const navigateToForm = () => {
-    history.push('/form')
+    history.push('/form/ready')
   };
 
   return (
@@ -35,7 +35,7 @@ const LandingPage = () => {
         <div className="explain-content">
           <h1>What sets pzzzow apart...</h1>
           <p>May people delay sleep because they didn't get enough down time during the day - a phenomenon called "revenge bedtime procrastination". Pzzzow will help you defeat this by reminding you when to wind down and sleep Also you will have some fun along the way!</p>
-          <img src="https://www.placecage.com/c/300/450" alt="pzzzow-screenshot" className="pzzzow-screenshot" />
+          <img src="https://www.placecage.com/c/310/450" alt="pzzzow-screenshot" className="pzzzow-screenshot" />
         </div>
       </section>
       <section className="footer">
