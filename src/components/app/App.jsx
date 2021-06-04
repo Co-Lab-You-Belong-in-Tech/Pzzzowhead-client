@@ -23,7 +23,8 @@ export default function App() {
 
   const [userName, setUserName] = useInput('');
   const [phoneNumber, setPhoneNumber] = useInput('');
-  const [wakeUpTime, setWakeUpTime] = useInput('');
+  const [timeInput, setTimeInput] = useInput('');
+  const [wakeUpTime, setWakeUpTime] = useState('');
   const [sleepLength, setSleepLength] = useInput('8');
   const [windDownTime, setWindDownTime] = useInput('90');
   const [personality, setPersonality] = useInput('sassy');
@@ -61,6 +62,8 @@ export default function App() {
           render={(routerProps) => <SleepSetup {...routerProps}
           sleepLength={sleepLength}
           setSleepLength={setSleepLength}
+          timeInput={timeInput}
+          setTimeInput={setTimeInput}
           wakeUpTime={wakeUpTime}
           setWakeUpTime={setWakeUpTime} /> } 
         />

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import moment from 'moment';
 
-const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime }) => {
+
+const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime, timeInput, setTimeInput }) => {
+  // const [timeInput, setTimeInput] = useState("");
 
   const history = useHistory();
 
@@ -10,16 +13,25 @@ const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime }) 
     history.push('/form/winddown');
   };
 
+  useEffect(() => {
+    const d = new Date();
+    // separates timezone from Date
+    const timeZone = d.toString().split(" ")[5].split("").slice(3).join("");
+    const time = `${timeInput}${timeZone}`;
+    console.log(timeInput);
+    setWakeUpTime(time);
+    console.log(wakeUpTime);
+
+
+  }, [timeInput])
+
   return (
     <>
     <div className="sleep-setup-card form">
     <h2>Time Flies...</h2>
       <p>Let's figure out when you should sleep!</p>
       <div className="sleep-setup-inputs">
-        <label>
-          Ideal Wake up time
-          <input  type="text" name="" value={wakeUpTime} onChange={setWakeUpTime} placeholder="8:30AM"/>
-        </label>
+        <input type="time"  value={timeInput} onChange={setTimeInput} />
         <label>
           Days of the Week
           <div className="weekDays-selector">
@@ -60,7 +72,8 @@ SleepSetup.propTypes = {
   sleepLength: PropTypes.number,
   wakeUpTime: PropTypes.string,
   setSleepLength: PropTypes.func.isRequired,
-  setWakeUpTime: PropTypes.func.isRequired
+  setWakeUpTime: PropTypes.func.isRequired,
+  setTimeInput: PropTypes.func.isRequired
 }
 
 export default SleepSetup
