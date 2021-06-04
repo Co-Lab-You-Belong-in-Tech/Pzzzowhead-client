@@ -26,8 +26,9 @@ export default function App() {
   const [timeInput, setTimeInput] = useInput('');
   const [wakeUpTime, setWakeUpTime] = useState('');
   const [sleepLength, setSleepLength] = useInput('8');
-  const [windDownTime, setWindDownTime] = useInput('90');
+  const [windDownLength, setWindDownLength] = useInput('90');
   const [personality, setPersonality] = useInput('sassy');
+  const 
 
   // click handlers --- possibly unneded
   const handleSubmit = (e) => {
@@ -36,7 +37,7 @@ export default function App() {
   }
   const sendSubmission = () => {
     console.log('clicked!');
-    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownTime, personality});
+    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownLength, personality});
  
   }
 
@@ -64,13 +65,12 @@ export default function App() {
           setSleepLength={setSleepLength}
           timeInput={timeInput}
           setTimeInput={setTimeInput}
-          wakeUpTime={wakeUpTime}
           setWakeUpTime={setWakeUpTime} /> } 
         />
         <Route path="/form/winddown" 
           render={(routerProps) => <WindDown {...routerProps}
-          windDownTime={windDownTime}
-          setWindDownTime={setWindDownTime} /> } 
+          windDownLength={windDownLength}
+          setWindDownLength={setWindDownLength} /> } 
         />
         <Route path="/form/pzzzownality" 
           render={(routerProps) => <Pzzzownality {...routerProps}
@@ -82,8 +82,8 @@ export default function App() {
           render={(routerProps) => <Confirmation {...routerProps}
           userName={userName}
           phoneNumber={phoneNumber}
-          wakeUpTime={wakeUpTime}
-          windDownTime={windDownTime}
+          timeInput={timeInput}
+          windDownLength={windDownLength}
           sleepLength={sleepLength}
           personality={personality}
           sendSubmission={sendSubmission}

@@ -5,7 +5,7 @@ export const newUser = async({
   phoneNumber,
   wakeUpTime,
   sleepLength,
-  windDownTime,
+  windDownLength,
   personality
  }) => {
     const payload = JSON.stringify({
@@ -13,7 +13,7 @@ export const newUser = async({
     phoneNumber,
     wakeUpTime,
     sleepLength,
-    windDownTime: parseFloat(windDownTime),
+    windDownLength: parseFloat(windDownLength),
     personality,
   });
     const res = await fetch(`${SERVER_URL}/user/newUser`, {

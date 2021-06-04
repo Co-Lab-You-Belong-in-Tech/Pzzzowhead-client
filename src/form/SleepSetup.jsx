@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 
-const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime, timeInput, setTimeInput }) => {
-  // const [timeInput, setTimeInput] = useState("");
+const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput }) => {
 
   const history = useHistory();
 
@@ -14,15 +13,11 @@ const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime, ti
   };
 
   useEffect(() => {
+    // combines client's timezone with their timeInput
     const d = new Date();
-    // separates timezone from Date
     const timeZone = d.toString().split(" ")[5].split("").slice(3).join("");
     const time = `${timeInput}${timeZone}`;
-    console.log(timeInput);
     setWakeUpTime(time);
-    console.log(wakeUpTime);
-
-
   }, [timeInput])
 
   return (
@@ -70,7 +65,7 @@ const SleepSetup = ({ sleepLength, wakeUpTime, setSleepLength, setWakeUpTime, ti
 
 SleepSetup.propTypes = {
   sleepLength: PropTypes.number,
-  wakeUpTime: PropTypes.string,
+  timeInput: PropTypes.string,
   setSleepLength: PropTypes.func.isRequired,
   setWakeUpTime: PropTypes.func.isRequired,
   setTimeInput: PropTypes.func.isRequired
