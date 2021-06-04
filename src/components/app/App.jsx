@@ -22,12 +22,13 @@ export default function App() {
   const [submissionStyle, setSubmissionStyle] = useState('none');
 
   const [userName, setUserName] = useInput('');
-  const [phoneNumber, setPhoneNumber] = useInput('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [timeInput, setTimeInput] = useInput('');
   const [wakeUpTime, setWakeUpTime] = useState('');
   const [sleepLength, setSleepLength] = useInput('8');
-  const [windDownLength, setWindDownLength] = useInput('90');
+  const [windDownLength, setWindDownLength] = useInput('1.5 hours');
   const [personality, setPersonality] = useInput('sassy');
+  const [weekday, setWeekday] = useInput('weekdays only');
 
   // click handlers --- possibly unneded
   const handleSubmit = (e) => {
@@ -36,7 +37,7 @@ export default function App() {
   }
   const sendSubmission = () => {
     console.log('clicked!');
-    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownLength, personality});
+    newUser({userName, phoneNumber, timeInput, wakeUpTime, weekday, sleepLength, windDownLength, personality});
  
   }
 
@@ -64,6 +65,7 @@ export default function App() {
           setSleepLength={setSleepLength}
           timeInput={timeInput}
           setTimeInput={setTimeInput}
+          setWeekday={setWeekday}
           setWakeUpTime={setWakeUpTime} /> } 
         />
         <Route path="/form/winddown" 
@@ -86,6 +88,7 @@ export default function App() {
           sleepLength={sleepLength}
           personality={personality}
           sendSubmission={sendSubmission}
+          weekday={weekday}
            /> } 
         />
         <Route path="/form/celebrate" 
