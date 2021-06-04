@@ -1,13 +1,16 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import { useHistory } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { getWindDownAlarm } from '../utils/getWindDownAlarm';
 
-const WindDown = ({ windDownLength, setWindDownLength }) => {
+const WindDown = ({ windDownLength, setWindDownLength, bedTimeAlarm, setWindDownAlarm }) => {
 
   const history = useHistory();
 
   const navigateToPzzzownality = () => {
-    console.log(windDownLength);
+    const newWindDownTime = getWindDownAlarm(bedTimeAlarm, windDownLength);
+    console.log(newWindDownTime);
+    setWindDownAlarm(newWindDownTime);
     history.push('/form/pzzzownality');
   };
 
@@ -73,7 +76,9 @@ const WindDown = ({ windDownLength, setWindDownLength }) => {
 
 WindDown.propTypes = {
   windDownLength: PropTypes.string,
-  setWindDownLength: PropTypes.func.isRequired
+  setWindDownLength: PropTypes.func.isRequired,
+  bedTimeAlarm: PropTypes.string,
+  setWindDownAlarm: PropTypes.func.isRequired
 }
 
 export default WindDown
