@@ -39,7 +39,7 @@ export default function App() {
   }
   const sendSubmission = () => {
     console.log('clicked!');
-    newUser({userName, phoneNumber, timeInput, wakeUpTime, weekday, sleepLength, windDownLength, personality});
+    newUser({userName, phoneNumber, wakeUpTime, weekday, sleepLength, bedTimeAlarm, windDownLength, windDownAlarm, personality});
  
   }
 

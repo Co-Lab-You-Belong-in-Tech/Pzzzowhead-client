@@ -23,7 +23,7 @@ export const newUser = async({
     windDownAlarm, // changing formatting ( to "1.5 hours" or "2 hours")
     personality
   });
-
+  console.log(payload);
     const res = await fetch(`${SERVER_URL}/user/newUser`, {
       method: "POST",
       headers: { "Content-Type": "application/json"},

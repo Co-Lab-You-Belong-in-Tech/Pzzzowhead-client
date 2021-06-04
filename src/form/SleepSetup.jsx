@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import { getBedTimeAlarm } from '../utils/getBedTimeAlarm'
+import { getBedTimeAlarm } from '../utils/getBedTimeAlarm';
+import { getTimeZone } from '../utils/getTimeZone';
 
 
 const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput, setWeekday, setBedTimeAlarm }) => {
@@ -18,9 +19,7 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
 
   useEffect(() => {
     // combines client's timezone with their timeInput
-    const d = new Date();
-    const timeZone = d.toString().split(" ")[5].split("").slice(3).join("");
-    const time = `${timeInput}${timeZone}`;
+    const time = `${timeInput}${getTimeZone()}`;
     setWakeUpTime(time);
   }, [timeInput])
 
