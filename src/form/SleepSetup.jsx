@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 
-const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput }) => {
+const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput, setWeekday }) => {
 
   const history = useHistory();
 
@@ -24,38 +24,41 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
     <>
     <div className="sleep-setup-card form">
     <h2>Time Flies...</h2>
-      <p>Let's figure out when you should sleep!</p>
+      <p>Let's configure your bedtime next!</p>
       <div className="sleep-setup-inputs">
-        <input type="time"  value={timeInput} onChange={setTimeInput} />
-        <label>
-          Days of the Week
-          <div className="weekDays-selector">
-          <input type="checkbox" id="weekday-sun" className="weekday" />
-          <label htmlFor="weekday-sun">Sunday</label>
-          <input type="checkbox" id="weekday-mon" className="weekday" />
-          <label htmlFor="weekday-mon">Monday</label>
-          <input type="checkbox" id="weekday-tue" className="weekday" />
-          <label htmlFor="weekday-tue">Tuesday</label>
-          <input type="checkbox" id="weekday-wed" className="weekday" />
-          <label htmlFor="weekday-wed">Wednesday</label>
-          <input type="checkbox" id="weekday-thu" className="weekday" />
-          <label htmlFor="weekday-thu">Thursday</label>
-          <input type="checkbox" id="weekday-fri" className="weekday" />
-          <label htmlFor="weekday-fri">Friday</label>
-          <input type="checkbox" id="weekday-sat" className="weekday" />
-          <label htmlFor="weekday-sat">Saturday</label>
-        </div>
-        </label>
-        <label>
-          Sleep Goal (# of hours)
-          <select value={sleepLength} onChange={setSleepLength}>
-            <option value="6">6 hours</option>
-            <option value="7">7 hours</option>
-            <option default value="8">8 hours</option>
-            <option value="9">9 hours</option>
-            <option value="10">10 hours</option>
-          </select>
-        </label>
+        <label htmlFor="wake-up-time">Ideal Wake up time</label>
+          <input name="wake-up-time" type="time"  value={timeInput} onChange={setTimeInput} />
+        <label>When so you want sleep notifications?</label>
+          <label>
+            <input 
+            type="radio" 
+            name="weekday" 
+            defaultChecked
+            value="weekdays only" 
+            onChange={setWeekday}
+            className="weekday-radio" />
+            weekdays only
+          </label>
+          <label>
+            <input 
+            type="radio" 
+            name="weekday" 
+            value="all days" 
+            onChange={setWeekday}
+            className="weekday-radio" />
+            all days
+          </label>
+        
+          <label>
+            Sleep Goal (# of hours)
+            <select value={sleepLength} onChange={setSleepLength}>
+              <option value="6">6 hours</option>
+              <option value="7">7 hours</option>
+              <option default value="8">8 hours</option>
+              <option value="9">9 hours</option>
+              <option value="10">10 hours</option>
+            </select>
+          </label>
       </div>
       <button onClick={navigateToWindDown}>Next</button>
     </div>
@@ -68,7 +71,8 @@ SleepSetup.propTypes = {
   timeInput: PropTypes.string,
   setSleepLength: PropTypes.func.isRequired,
   setWakeUpTime: PropTypes.func.isRequired,
-  setTimeInput: PropTypes.func.isRequired
+  setTimeInput: PropTypes.func.isRequired,
+  setWeekday: PropTypes.func.isRequired
 }
 
 export default SleepSetup

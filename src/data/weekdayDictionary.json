@@ -1,0 +1,4 @@
+{
+  "weekdays only": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  "all days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+}

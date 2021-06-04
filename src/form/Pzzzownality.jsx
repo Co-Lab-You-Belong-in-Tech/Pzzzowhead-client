@@ -18,10 +18,27 @@ const Pzzzownality = ({ personality, setPersonality }) => {
         <div className="personality-inputs">
         <label>
             Pillow Personality:
-            <select value={personality} onChange={setPersonality}>
-              <option default value="sassy">Sassy</option>
-              <option value="friendly">Friendly</option>
-            </select>
+            <label>
+              <input
+                defaultChecked
+                type="radio"
+                name="pzzzownality"
+                value="sassy"
+                onChange={setPersonality}
+                className="wind-down-radio"
+              />
+              Sassy
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="pzzzownality"
+                value="cheerleader"
+                onChange={setPersonality}
+                className="wind-down-radio"
+              />
+              Cheerleader
+            </label>
           </label>
         </div>
         <button onClick={navigateToConfirmation}>Next</button>
