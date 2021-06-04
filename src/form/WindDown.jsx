@@ -2,12 +2,12 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-const WindDown = ({ windDownTime, setWindDownTime }) => {
+const WindDown = ({ windDownLength, setWindDownLength }) => {
 
   const history = useHistory();
 
   const navigateToConfirmation = () => {
-    console.log(windDownTime);
+    console.log(windDownLength);
     history.push('/form/pzzzownality');
   };
 // Focus on showing state ic Confirmation afer break
@@ -26,8 +26,8 @@ const WindDown = ({ windDownTime, setWindDownTime }) => {
                 type="radio"
                 name="wind-downs"
                 value="1"
-                checked={windDownTime === "1"}
-                onChange={e => setWindDownTime(e.currentTarget.value)}
+                checked={windDownLength === "1"}
+                onChange={e => setWindDownLength(e.currentTarget.value)}
                 className="wind-down-radio"
               />
               1 Hour
@@ -37,8 +37,8 @@ const WindDown = ({ windDownTime, setWindDownTime }) => {
                 type="radio"
                 name="wind-downs"
                 value="1.5"
-                checked={windDownTime === "1.5"}
-                onChange={e => setWindDownTime(e.currentTarget.value)}
+                checked={windDownLength === "1.5"}
+                onChange={e => setWindDownLength(e.currentTarget.value)}
                 className="wind-down-radio"
               />
               1.5 Hours
@@ -48,8 +48,8 @@ const WindDown = ({ windDownTime, setWindDownTime }) => {
                 type="radio"
                 name="wind-downs"
                 value="2"
-                checked={windDownTime === "2"}
-                onChange={e => setWindDownTime(e.currentTarget.value)}
+                checked={windDownLength === "2"}
+                onChange={e => setWindDownLength(e.currentTarget.value)}
                 className="wind-down-radio"
               />
               2 Hours
@@ -59,8 +59,8 @@ const WindDown = ({ windDownTime, setWindDownTime }) => {
                 type="radio"
                 name="wind-downs"
                 value="other"
-                checked={windDownTime === "3"}
-                onChange={e => setWindDownTime(e.currentTarget.value)}
+                checked={windDownLength === "3"}
+                onChange={e => setWindDownLength(e.currentTarget.value)}
                 className="wind-down-radio"
               />
               Other
@@ -74,8 +74,8 @@ const WindDown = ({ windDownTime, setWindDownTime }) => {
 }
 
 WindDown.propTypes = {
-  windDownTime: PropTypes.string,
-  setWindDownTime: PropTypes.func.isRequired
+  windDownLength: PropTypes.string,
+  setWindDownLength: PropTypes.func.isRequired
 }
 
 export default WindDown

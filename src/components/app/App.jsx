@@ -23,9 +23,10 @@ export default function App() {
 
   const [userName, setUserName] = useInput('');
   const [phoneNumber, setPhoneNumber] = useInput('');
-  const [wakeUpTime, setWakeUpTime] = useInput('');
+  const [timeInput, setTimeInput] = useInput('');
+  const [wakeUpTime, setWakeUpTime] = useState('');
   const [sleepLength, setSleepLength] = useInput('8');
-  const [windDownTime, setWindDownTime] = useInput('90');
+  const [windDownLength, setWindDownLength] = useInput('90');
   const [personality, setPersonality] = useInput('sassy');
 
   // click handlers --- possibly unneded
@@ -35,7 +36,7 @@ export default function App() {
   }
   const sendSubmission = () => {
     console.log('clicked!');
-    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownTime, personality});
+    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownLength, personality});
  
   }
 
@@ -61,13 +62,14 @@ export default function App() {
           render={(routerProps) => <SleepSetup {...routerProps}
           sleepLength={sleepLength}
           setSleepLength={setSleepLength}
-          wakeUpTime={wakeUpTime}
+          timeInput={timeInput}
+          setTimeInput={setTimeInput}
           setWakeUpTime={setWakeUpTime} /> } 
         />
         <Route path="/form/winddown" 
           render={(routerProps) => <WindDown {...routerProps}
-          windDownTime={windDownTime}
-          setWindDownTime={setWindDownTime} /> } 
+          windDownLength={windDownLength}
+          setWindDownLength={setWindDownLength} /> } 
         />
         <Route path="/form/pzzzownality" 
           render={(routerProps) => <Pzzzownality {...routerProps}
@@ -79,8 +81,8 @@ export default function App() {
           render={(routerProps) => <Confirmation {...routerProps}
           userName={userName}
           phoneNumber={phoneNumber}
-          wakeUpTime={wakeUpTime}
-          windDownTime={windDownTime}
+          timeInput={timeInput}
+          windDownLength={windDownLength}
           sleepLength={sleepLength}
           personality={personality}
           sendSubmission={sendSubmission}

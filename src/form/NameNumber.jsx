@@ -23,7 +23,7 @@ const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
             </label>
           <label>
               Phone
-              <input  type="text" name="" value={phoneNumber} onChange={setPhoneNumber} placeholder={`(000) 000 0000`}/>
+              <input  type="tel" name="" value={phoneNumber} onChange={setPhoneNumber} placeholder={`(000) 000 0000`}/>
             </label>
         </div>
         <button onClick={navigateToSleepSetup}>Next</button>

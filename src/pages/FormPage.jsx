@@ -21,7 +21,7 @@ const FormPage = () => {
     const [phoneNumber, setPhoneNumber] = useInput('');
     const [wakeUpTime, setWakeUpTime] = useInput('');
     const [sleepLength, setSleepLength] = useInput(8);
-    const [windDownTime, setWindDownTime] = useInput('');
+    const [windDownLength, setWindDownLength] = useInput('');
     const [personality, setPersonality] = useInput('sassy');
 
   const handleSubmit = (e) => {
@@ -30,7 +30,7 @@ const FormPage = () => {
   }
   const sendSubmission = () => {
     console.log('clicked!');
-    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownTime, personality});
+    newUser({userName, phoneNumber, wakeUpTime, sleepLength, windDownLength, personality});
  
   }
 
@@ -62,7 +62,7 @@ const FormPage = () => {
           </label>
           <label>
             Wind Down Time:
-            <input  type="text" name="" value={windDownTime} onChange={setWindDownTime} placeholder="90"/>
+            <input  type="text" name="" value={windDownLength} onChange={setWindDownLength} placeholder="90"/>
           </label>
           <label>
             Pillow Personality:
@@ -78,7 +78,7 @@ const FormPage = () => {
           <p> Your phone number is {phoneNumber}</p>
           <p> Your wake up time is {wakeUpTime}</p>
           <p> Your Preferred Sleep length is {sleepLength} hours</p>
-          <p> Your Wind Down time is {windDownTime} minutes</p>
+          <p> Your Wind Down time is {windDownLength} minutes</p>
           <p> And your sleep bot personality is "{personality}" </p>
           <button onClick={sendSubmission}>Let's Do This!</button>
         </div>
