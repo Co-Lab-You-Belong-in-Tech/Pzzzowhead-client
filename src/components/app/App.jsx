@@ -27,8 +27,10 @@ export default function App() {
   const [wakeUpTime, setWakeUpTime] = useState('');
   const [sleepLength, setSleepLength] = useInput('8');
   const [windDownLength, setWindDownLength] = useInput('1.5 hours');
+  const [windDownAlarm, setWindDownAlarm] = useState('');
   const [personality, setPersonality] = useInput('sassy');
   const [weekday, setWeekday] = useInput('weekdays only');
+  const [bedTimeAlarm, setBedTimeAlarm] = useState('');
 
   // click handlers --- possibly unneded
   const handleSubmit = (e) => {
@@ -66,12 +68,15 @@ export default function App() {
           timeInput={timeInput}
           setTimeInput={setTimeInput}
           setWeekday={setWeekday}
-          setWakeUpTime={setWakeUpTime} /> } 
+          setWakeUpTime={setWakeUpTime}
+          setBedTimeAlarm={setBedTimeAlarm} /> } 
         />
         <Route path="/form/winddown" 
           render={(routerProps) => <WindDown {...routerProps}
           windDownLength={windDownLength}
-          setWindDownLength={setWindDownLength} /> } 
+          setWindDownLength={setWindDownLength}
+          bedTimeAlarm={bedTimeAlarm}
+          setWindDownAlarm={setWindDownAlarm} /> } 
         />
         <Route path="/form/pzzzownality" 
           render={(routerProps) => <Pzzzownality {...routerProps}
@@ -85,10 +90,12 @@ export default function App() {
           phoneNumber={phoneNumber}
           timeInput={timeInput}
           windDownLength={windDownLength}
+          windDownAlarm={windDownAlarm}
           sleepLength={sleepLength}
           personality={personality}
           sendSubmission={sendSubmission}
           weekday={weekday}
+          bedTimeAlarm={bedTimeAlarm}
            /> } 
         />
         <Route path="/form/celebrate" 

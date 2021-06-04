@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { getBedTimeAlarm } from '../utils/getBedTimeAlarm'
 
 
-const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput, setWeekday }) => {
+const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput, setWeekday, setBedTimeAlarm }) => {
 
   const history = useHistory();
 
   const navigateToWindDown = () => {
+    const newBedTime = getBedTimeAlarm(timeInput, sleepLength);
+    console.log(newBedTime);
+    setBedTimeAlarm(newBedTime);
     history.push('/form/winddown');
   };
 
@@ -67,12 +71,13 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
 }
 
 SleepSetup.propTypes = {
-  sleepLength: PropTypes.number,
+  sleepLength: PropTypes.string,
   timeInput: PropTypes.string,
   setSleepLength: PropTypes.func.isRequired,
   setWakeUpTime: PropTypes.func.isRequired,
   setTimeInput: PropTypes.func.isRequired,
-  setWeekday: PropTypes.func.isRequired
+  setWeekday: PropTypes.func.isRequired,
+  setBedTimeAlarm: PropTypes.func.isRequired
 }
 
 export default SleepSetup
