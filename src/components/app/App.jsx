@@ -28,7 +28,6 @@ export default function App() {
   const [sleepLength, setSleepLength] = useInput('8');
   const [windDownLength, setWindDownLength] = useInput('90');
   const [personality, setPersonality] = useInput('sassy');
-  const 
 
   // click handlers --- possibly unneded
   const handleSubmit = (e) => {
