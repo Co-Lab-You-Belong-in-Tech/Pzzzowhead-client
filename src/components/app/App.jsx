@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import '../../styles/App.css';
 
 import LandingPage from '../../pages/LandingPage';
 import FormPage from '../../pages/FormPage';
