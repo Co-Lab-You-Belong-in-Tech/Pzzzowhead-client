@@ -1,0 +1,64 @@
+.landingPage {
+  background-color: var(--white);
+}
+
+.titleContainer {
+  height: calc(100vw / (362 / 210));
+}
+.landingImage {
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.mainTitle {
+  padding-top: 8%;
+  padding-left: 8%;
+  position: relative;
+  z-index: 2;
+}
+
+.introContainer {
+  margin: 2.5rem 7vw;
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.infoContainer {
+  margin: 2.5rem 7vw;
+  img {
+    width: 14vw;
+  }
+  h2 {
+    margin: 1rem 0;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.explainContainer {
+  margin: 2.5rem 7vw;
+  margin-bottom: 3rem;
+  h1 {
+    margin: 1rem 0;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.tryItNowButtonBottom {
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+.smsImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .phoneScreen {
+    padding-right: 13vw;
+  }
+}

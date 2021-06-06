@@ -1,6 +1,15 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
+import styles from '../styles/LandingPage.css';
+import landingImage from '../assets/pzzzow-landing-page-image.png';
+import pickAPzzzow from '../assets/Pick_A_Pzzzow_Icon.png';
+import windDown from '../assets/Wind_Down_Icon.png';
+import sleepCalendar from '../assets/Sleep_Calendar_Icon.png';
+
+// SMS images
+import phoneScreen from '../assets/iPhone_Mockup/Group\ 77.png';
+
 const LandingPage = () => {
   const history = useHistory();
 
@@ -9,44 +18,47 @@ const LandingPage = () => {
   };
 
   return (
-    <>
-      <section className="intro-container">
-        <h1>Make going to sleep fun!</h1>
-        <h3> Get personalized text, reminders and schedule how your prefer with help form pzzzowhead</h3>
+    <div className={styles.landingPage}>
+      <section className={styles.titleContainer}>
+        <img className={styles.landingImage} src={landingImage} alt="pzzzow head landing page image" />
+        <h2 className={styles.mainTitle}>pzzzow talk</h2>
       </section>
-      <section className="card-container">
+      <div className={styles.introContainer}>
+        <h1> I'm Pizzow - your personal sleep text bot. </h1>
+        <p> I'm <strong>NOT</strong> a boring sleep alarm- cause you snooze that <strong>s***</strong> and watch Youtube. With me, you watch Youtube guilt free. And get 8 hours of sleep.</p>
+        <button className={styles.tryItNowButton} onClick={navigateToForm}>Try it now!</button>
+        </div>
+    
+      <section className={styles.infoContainer}>
         <div className="info-card">
-          <img src="https://www.placecage.com/c/300/195" alt=" " className="card-image" />
-          <h2>Pzzzowhead</h2>
-          <p>Pickt he typw of pzzzowhead personality you'd like to receiv texts from</p>
+          <img src={pickAPzzzow} alt="pick a pzzzow" className="card-image" />
+          <h2>Pick your Pzzzow</h2>
+          <p>You need soft encouragement? Tough love? Pick the pzzzow that works for you</p>
         </div>
         <div className="info-card">
-          <img src="https://www.placecage.com/c/305/200" alt=" " className="card-image" />
-            <h2>Help from a friend</h2>
-            <p>Pzzzowhead will healp you create a personalized sleep schedule and send you daily reminders</p>
+          <img src={windDown} alt="pzzzow clock" className="card-image" />
+            <h2>Guilt - Free Downtime</h2>
+            <p>Always sacrificing your downtime or your sleep? Not with Pzzzow.</p>
         </div>
         <div className="info-card">
-          <img src="https://www.placecage.com/c/302/200" alt=" " className="card-image" />
-            <h2>Sleep Easy</h2>
-            <p>With the help of pzzzowhead you will know what time you need to wind down, go to bed and the amount of sleep hours you will get each night.</p>
+          <img src={sleepCalendar} alt="pzzzow calendar " className="card-image" />
+            <h2>Custom Sleep Schedule</h2>
+            <p>Pzzzow will help you create a wind down and sleep schedule that works for you.</p>
         </div>
       </section>
-      <section className="explain-container">
-        <div className="explain-content">
-          <h1>What sets pzzzow apart...</h1>
-          <p>May people delay sleep because they didn't get enough down time during the day - a phenomenon called "revenge bedtime procrastination". Pzzzow will help you defeat this by reminding you when to wind down and sleep Also you will have some fun along the way!</p>
-          <img src="https://www.placecage.com/c/310/450" alt="pzzzow-screenshot" className="pzzzow-screenshot" />
-        </div>
+      <section className={styles.explainContainer}>
+          <div className={styles.smsImageContainer}>
+            <img className={styles.phoneScreen} src={phoneScreen} alt="phone screen"  />
+          </div>
+          <h1>I fight Revenge Bedtime Procrastination</h1>
+          <p>You want to sleep earlier. It’s 12am, you say “just one video” and then <strong>BOOM! It’s 3AM?!</strong></p>
+
+          <p>That’s called <strong>Revenge Bedtime Procrastination</strong> and it happens because you haven’t set a wind down and sleep schedule that works. <strong>I’m here to help you fight it!</strong></p>
+          <button className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
       </section>
-      <section className="footer">
-        <footer>This is the footer for Pzzzowhead</footer>
-      </section>
+      <footer>This is the footer for Pzzzowhead</footer>
 
-
-
-      <p> Enter and begin your journey to a better night's sleep </p>
-      <button onClick={() => navigateToForm()}>Try me!</button>
-    </>
+    </div>
     
   )
 }
