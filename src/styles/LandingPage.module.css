@@ -52,13 +52,5 @@
 .tryItNowButtonBottom {
   margin-top: 4rem;
   margin-left: 1rem;
-}
-
-.smsImageContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .phoneScreen {
-    padding-right: 13vw;
-  }
+  margin-bottom: 2rem;
 }
