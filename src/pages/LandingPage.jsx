@@ -7,8 +7,9 @@ import pickAPzzzow from '../assets/Pick_A_Pzzzow_Icon.png';
 import windDown from '../assets/Wind_Down_Icon.png';
 import sleepCalendar from '../assets/Sleep_Calendar_Icon.png';
 
-// SMS images
-import phoneScreen from '../assets/iPhone_Mockup/Group\ 77.png';
+import SmsImage from '../components/SmsImage';
+
+
 
 const LandingPage = () => {
   const history = useHistory();
@@ -47,9 +48,7 @@ const LandingPage = () => {
         </div>
       </section>
       <section className={styles.explainContainer}>
-          <div className={styles.smsImageContainer}>
-            <img className={styles.phoneScreen} src={phoneScreen} alt="phone screen"  />
-          </div>
+          <SmsImage />
           <h1>I fight Revenge Bedtime Procrastination</h1>
           <p>You want to sleep earlier. It’s 12am, you say “just one video” and then <strong>BOOM! It’s 3AM?!</strong></p>
 
