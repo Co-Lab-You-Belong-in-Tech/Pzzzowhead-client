@@ -16,7 +16,6 @@ import faceTwo from '../assets/iPhone_Mockup/face_2.png';
 
 
 const SmsImage = () => {
-  // Animation prep
   useEffect(() => {
     Aos.init({duration: 1000, 
       delay: 800 
@@ -32,7 +31,7 @@ const SmsImage = () => {
         <div className={styles.faceOne}>
           <img data-aos="zoom-in" 
            data-aos-easing="ease-out-back"
-           data-aos-delay="3000"
+           data-aos-delay="2000"
             src={faceOne} alt="smiley face" />
         </div>
       </div>
@@ -45,7 +44,7 @@ const SmsImage = () => {
           <img 
             data-aos="zoom-in" 
             data-aos-easing="ease-out-back"
-            data-aos-delay="3000"
+            data-aos-delay="2100"
             src={faceTwo} alt="smiley face" />
         </div>
       </div>

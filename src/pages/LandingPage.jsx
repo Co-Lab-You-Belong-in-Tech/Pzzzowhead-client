@@ -15,7 +15,7 @@ require('aos/dist/aos.css');
 
 const LandingPage = () => {
   useEffect(() => {
-    Aos.init({ duration: 900 });
+    Aos.init({ duration: 600 });
   }, []);
 
   const history = useHistory();
@@ -35,20 +35,25 @@ const LandingPage = () => {
       </section>
       <div className={styles.introContainer}>
         <h1 data-aos="fade" 
-          data-aos-duration="400"> I'm Pizzow - your personal sleep text bot. </h1>
+          data-aos-duration="300"> I'm Pizzow - your personal sleep text bot. </h1>
         <p data-aos="fade-up" 
-          data-aos-duration="1500"
-          data-aos-delay="1300"> I'm <strong>NOT</strong> a boring sleep alarm- cause you snooze that <strong>s***</strong> and watch Youtube. With me, you watch Youtube guilt free. And get 8 hours of sleep.</p>
+          data-aos-duration="800"
+          data-aos-delay="5"> I'm <strong>NOT</strong> a boring sleep alarm- cause you snooze that <strong>s***</strong> and watch Youtube. With me, you watch Youtube guilt free. And get 8 hours of sleep.</p>
         <button data-aos="fade-right" 
-          data-aos-delay="3000"
-          data-aos-duration="3000"
+          data-aos-delay="900"
+          data-aos-duration="2400"
           className={styles.tryItNowButton} onClick={navigateToForm}>Try it now!</button>
-        </div>
-    
+      </div>
+      <section className={styles.explainContainer}>
+        <SmsImage />
+        <h1>I fight Revenge Bedtime Procrastination</h1>
+        <p>You want to sleep earlier. It’s 12am, you say “just one video” and then <strong>BOOM! It’s 3AM?!</strong></p>
+
+        <p>That’s called <strong>Revenge Bedtime Procrastination</strong> and it happens because you haven’t set a wind down and sleep schedule that works. <strong>I’m here to help you fight it!</strong></p>
+      </section>
       <section 
          className={styles.infoContainer}>
         <div data-aos="fade-up"
-          data-aos-delay="2000"
           className="info-card">
           <img src={pickAPzzzow} alt="pick a pzzzow"      className="card-image" />
           <h2>Pick your Pzzzow</h2>
@@ -67,17 +72,11 @@ const LandingPage = () => {
             <p data-aos="fade-up" 
               data-aos-delay="800">Pzzzow will help you create a wind down and sleep schedule that works for you.</p>
         </div>
-      </section>
-      <section className={styles.explainContainer}>
-          <SmsImage />
-          <h1>I fight Revenge Bedtime Procrastination</h1>
-          <p>You want to sleep earlier. It’s 12am, you say “just one video” and then <strong>BOOM! It’s 3AM?!</strong></p>
-
-          <p>That’s called <strong>Revenge Bedtime Procrastination</strong> and it happens because you haven’t set a wind down and sleep schedule that works. <strong>I’m here to help you fight it!</strong></p>
-          <button 
-            data-aos="zoom-in" 
-            data-aos-anchor-placement="bottom-bottom" 
-            className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
+        <button 
+          data-aos="fade-left" 
+          data-aos-duration="2000"
+          data-aos-easing="ease-in-out-sine"
+          className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
       </section>
       <footer style={{ display: 'none'}}>This is the footer for Pzzzowhead</footer>
 

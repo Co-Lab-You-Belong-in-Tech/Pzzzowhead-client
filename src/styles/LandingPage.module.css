@@ -23,6 +23,9 @@
   h1 {
     margin-bottom: 1rem;
   }
+  button {
+    margin: 3rem 0;
+  }
 }
 
 .infoContainer {
