@@ -1,5 +1,6 @@
 const SERVER_URL = process.env.DEV_SERVER;
 import weekdayDictionary from '../data/weekdayDictionary.json';
+import { getDateWithTZ } from './getDateWithTZ';
 
 export const newUser = async({ 
   userName,
@@ -12,6 +13,9 @@ export const newUser = async({
   windDownAlarm,
   personality
  }) => {
+
+    const signUpDate = await getDateWithTZ();
+
     const payload = JSON.stringify({
     userName,
     phoneNumber,
@@ -21,7 +25,8 @@ export const newUser = async({
     bedTimeAlarm,
     windDownLength,
     windDownAlarm, // changing formatting ( to "1.5 hours" or "2 hours")
-    personality
+    personality,
+    signUpDate
   });
   console.log(payload);
     const res = await fetch(`${SERVER_URL}/user/newUser`, {
