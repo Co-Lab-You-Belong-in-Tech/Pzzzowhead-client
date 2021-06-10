@@ -1,9 +1,10 @@
-.readyContainer {
+.sleepSetupContainer {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: safe;
-  align-items: center;
-  margin: 6rem 7vw;
+  justify-content: space-around;
+  align-items: reft;
+  padding: 6rem 7vw;
   h2 {
     width: 95%;
     text-align: left;

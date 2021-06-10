@@ -10,7 +10,9 @@ const Ready = () => {
   const history = useHistory();
 
   const navigateToNameNumber = () => {
-    history.push('/form/nameandnumber')
+    setTimeout(() => {
+      history.push('/form/sleepsetup')
+    }, 400);
   };
 
 

@@ -24,11 +24,11 @@ button {
   display: inline-block;
   border-radius: 2rem;
   border: solid 2px var(--text);
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.3rem;
   box-sizing: border-box;
   margin: 1rem 0;
   font-family: var(--content-font);
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.2s;
 }
 
@@ -43,32 +43,38 @@ button:active {
   color: var(--text);
 }
 
-.form {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem 7vw;
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--primary-1);
+  opacity: 1; /* Firefox */
+}
 
-  h2 {
-    width: 95%;
-    text-align: left;
-    color: var(--primary-1);
-  }
-  img {
-    padding: 3rem 0;
-  }
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-  }
-  em {
-    color: var(--primary-1);
-    font-size: 1.3rem;
-    font-weight: 700;
-  }
-  button {
-    width: 75vw;
-    font-size: 1.4rem;
-  }
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--primary-1);
+}
+
+.PhoneInputCountry {
+  margin-top: -15px;
+}
+
+/* Remove Mobile Device auto-zoom on Inputs */
+
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+select:focus,
+textarea {
+  font-size: 16px;
 }

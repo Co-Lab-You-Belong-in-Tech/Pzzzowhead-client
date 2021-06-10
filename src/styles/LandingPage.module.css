@@ -1,5 +1,7 @@
 .landingPage {
   background-color: var(--white);
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 .titleContainer {
@@ -19,7 +21,7 @@
 }
 
 .introContainer {
-  margin: 2.5rem 7vw;
+  padding: 2.5rem 7vw;
   h1 {
     margin-bottom: 1rem;
   }
@@ -56,5 +58,5 @@
 .tryItNowButtonBottom {
   margin-top: 4rem;
   margin-left: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }

@@ -5,6 +5,8 @@ import moment from 'moment';
 import { getBedTimeAlarm } from '../utils/getBedTimeAlarm';
 import { getTimeZone } from '../utils/getTimeZone';
 
+import styles from '../styles/SleepSetup.module.css'
+
 
 const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, setTimeInput, setWeekday, setBedTimeAlarm }) => {
 
@@ -25,8 +27,8 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
 
   return (
     <>
-    <div className="sleep-setup-card form">
-    <h2>Time Flies...</h2>
+    <div className={styles.sleepSetupContainer}>
+    <h2>Time Flies ⏰...</h2>
       <p>Let's configure your bedtime next!</p>
       <div className="sleep-setup-inputs">
         <label htmlFor="wake-up-time">Ideal Wake up time</label>
