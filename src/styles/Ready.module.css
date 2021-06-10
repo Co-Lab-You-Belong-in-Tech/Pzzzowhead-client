@@ -1,0 +1,28 @@
+.readyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: safe;
+  align-items: center;
+  margin: 6rem 7vw;
+  h2 {
+    width: 95%;
+    text-align: left;
+    color: var(--primary-1);
+  }
+  img {
+    padding: 3rem 0;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  em {
+    color: var(--primary-1);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  button {
+    width: 75vw;
+    font-size: 1.4rem;
+  }
+}

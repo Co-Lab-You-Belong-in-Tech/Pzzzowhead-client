@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 
+import styles from '../styles/NameAndNumber.module.css'
+
 const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
 
   const history = useHistory();
@@ -14,17 +16,16 @@ const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
 
   return (
     <>
-      <div className="name-number-card form">
+      <div className={styles.nameNumberContainer}>
       <h2>Those digits.</h2>
         <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>
         <p>Let's create your custom sleep schedule.</p>
-        <div className="name-number-inputs">
-          <label>
-              Name:
-                <input  type="text" name="" value={userName} onChange={setUserName} placeholder="Your Name"/>
-            </label>
-              
-              <PhoneInput
+        <div className={styles.inputs}>
+          <p className={styles.label}>Name</p>
+          <input  type="text" name="" value={userName} onChange={setUserName} placeholder="Your Name"/>
+            
+          <p className={styles.label}>Phone</p>
+          <PhoneInput
                 international
                 defaultCountry="CA"
                 value={phoneNumber}

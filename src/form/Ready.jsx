@@ -1,5 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import styles from '../styles/Ready.module.css';
+
+
+import readyGif from '../assets/pzzzow-animation-1.gif';
 
 const Ready = () => {
 
@@ -12,10 +16,10 @@ const Ready = () => {
 
   return (
     <>
-      <div className="ready-card form">
+      <div className={styles.readyContainer}>
         <h2>Ready to sleep Earlier?</h2>
-        <img src="https://www.placekitten.com/300/200" alt="ready-pic" />
-        <p>I'm your personal textbot, <em>Pzzzowhead</em> and will be texting you wind-down and bedtime reminders!</p>
+        <img src={readyGif} alt="ready-pic" />
+        <p>I'm your personal textbot, <em >pzzzow</em> and will be texting you wind-down and bedtime reminders!</p>
         <p>Let's create your custom sleep schedule.</p>
 
         <button onClick={navigateToNameNumber}>I'm Ready</button>

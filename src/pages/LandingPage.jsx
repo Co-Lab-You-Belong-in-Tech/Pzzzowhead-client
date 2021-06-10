@@ -15,7 +15,7 @@ require('aos/dist/aos.css');
 
 const LandingPage = () => {
   useEffect(() => {
-    Aos.init({ duration: 600 });
+    Aos.init({ duration: 500, anchorPlacement: 'top-bottom' });
   }, []);
 
   const history = useHistory();
@@ -31,7 +31,7 @@ const LandingPage = () => {
       <section className={styles.titleContainer}>
         <img className={styles.landingImage} src={landingImage} alt="pzzzow head landing page image" />
         <h2
-          className={styles.mainTitle}>pzzzow talk</h2>
+          className={styles.mainTitle}>pzzzow head</h2>
       </section>
       <div className={styles.introContainer}>
         <h1 data-aos="fade" 
@@ -74,7 +74,7 @@ const LandingPage = () => {
         </div>
         <button 
           data-aos="fade-left" 
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-easing="ease-in-out-sine"
           className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
       </section>
