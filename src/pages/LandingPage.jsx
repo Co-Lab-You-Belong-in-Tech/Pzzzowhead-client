@@ -15,7 +15,7 @@ require('aos/dist/aos.css');
 
 const LandingPage = () => {
   useEffect(() => {
-    Aos.init({ duration: 500, anchorPlacement: 'top-bottom' });
+    Aos.init({ duration: 500, anchorPlacement: 'top-top' });
   }, []);
 
   const history = useHistory();
@@ -76,6 +76,7 @@ const LandingPage = () => {
           data-aos="fade-left" 
           data-aos-duration="1000"
           data-aos-easing="ease-in-out-sine"
+          data-aos-anchor-placement="top-bottom"
           className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
       </section>
       <footer style={{ display: 'none'}}>This is the footer for Pzzzowhead</footer>

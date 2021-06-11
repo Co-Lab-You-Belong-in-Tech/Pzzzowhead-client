@@ -11,18 +11,21 @@ const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
   const history = useHistory();
 
   const navigateToSleepSetup = () => {
-    history.push('/form/sleepsetup')
+    setTimeout(() => {
+      history.push('/form/confirmation')
+    }, 400);
   };
 
   return (
     <>
       <div className={styles.nameNumberContainer}>
-      <h2>Those digits.</h2>
-        <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>
-        <p>Let's create your custom sleep schedule.</p>
+        <div>
+          <h2>Those digits ☎️</h2>
+          <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>
+        </div>
         <div className={styles.inputs}>
           <p className={styles.label}>Name</p>
-          <input  type="text" name="" value={userName} onChange={setUserName} placeholder="Your Name"/>
+          <input  className={styles.nameInput} type="text" name="" value={userName} onChange={setUserName} placeholder="John Doe"/>
             
           <p className={styles.label}>Phone</p>
           <PhoneInput

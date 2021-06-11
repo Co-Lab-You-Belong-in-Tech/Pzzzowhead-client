@@ -1,20 +1,23 @@
-.readyContainer {
+.celebrateContainer {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: safe;
-  align-items: center;
-  padding: 6rem 7vw;
+  justify-content: space-around;
+  padding: 4rem 7vw;
+
   h2 {
     width: 95%;
     text-align: left;
     color: var(--primary-1);
+    padding-bottom: 0.5rem;
   }
   img {
-    padding: 3rem 0;
+    width: 75%;
+    align-self: center;
   }
+
   p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: 1rem;
   }
   em {
@@ -25,5 +28,6 @@
   button {
     width: 75vw;
     font-size: 1.4rem;
+    align-self: center;
   }
 }
