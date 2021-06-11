@@ -35,7 +35,7 @@ const LandingPage = () => {
       </section>
       <div className={styles.introContainer}>
         <h1 data-aos="fade" 
-          data-aos-duration="300"> I'm Pizzow - your personal sleep text bot. </h1>
+          data-aos-duration="300"> I'm Pzzzow - your personal sleep text bot. </h1>
         <p data-aos="fade-up" 
           data-aos-duration="800"
           data-aos-delay="5"> I'm <strong>NOT</strong> a boring sleep alarm- cause you snooze that <strong>s***</strong> and watch Youtube. With me, you watch Youtube guilt free. And get 8 hours of sleep.</p>
