@@ -6,13 +6,14 @@ import 'react-phone-number-input/style.css'
 
 import styles from '../styles/NameAndNumber.module.css'
 
-const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
+const NameNumber = ({sendSubmission, phoneNumber, setPhoneNumber, userName, setUserName}) => {
 
   const history = useHistory();
 
   const navigateToSleepSetup = () => {
     setTimeout(() => {
-      history.push('/form/confirmation')
+      sendSubmission();
+      history.push('/form/celebrate')
     }, 400);
   };
 
@@ -42,6 +43,7 @@ const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
 }
 
 NameNumber.propTypes = {
+  sendSubmission: PropTypes.func.isRequired,
   phoneNumber: PropTypes.string,
   setPhoneNumber: PropTypes.func.isRequired,
   userName: PropTypes.string,

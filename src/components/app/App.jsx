@@ -57,6 +57,7 @@ export default function App() {
         />
         <Route path="/form/nameandnumber" 
           render={(routerProps) => <NameNumber {...routerProps}
+          sendSubmission={sendSubmission}
           userName={userName}
           setUserName={setUserName}
           phoneNumber={phoneNumber}
