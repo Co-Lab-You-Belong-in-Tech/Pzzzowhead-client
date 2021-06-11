@@ -26,7 +26,7 @@ export default function App() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [timeInput, setTimeInput] = useInput('');
   const [wakeUpTime, setWakeUpTime] = useState('');
-  const [sleepLength, setSleepLength] = useInput('8');
+  const [sleepLength, setSleepLength] = useInput('8 hours');
   const [windDownLength, setWindDownLength] = useInput('1.5 hours');
   const [windDownAlarm, setWindDownAlarm] = useState('');
   const [personality, setPersonality] = useInput('sassy');
@@ -57,6 +57,7 @@ export default function App() {
         />
         <Route path="/form/nameandnumber" 
           render={(routerProps) => <NameNumber {...routerProps}
+          sendSubmission={sendSubmission}
           userName={userName}
           setUserName={setUserName}
           phoneNumber={phoneNumber}

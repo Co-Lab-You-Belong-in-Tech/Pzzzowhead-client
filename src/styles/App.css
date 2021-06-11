@@ -24,11 +24,11 @@ button {
   display: inline-block;
   border-radius: 2rem;
   border: solid 2px var(--text);
-  padding: 0.4rem 1.2rem;
+  padding: 0.5rem 1.3rem;
   box-sizing: border-box;
   margin: 1rem 0;
   font-family: var(--content-font);
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.2s;
 }
 
@@ -41,4 +41,70 @@ button:active {
   background-color: var(--white);
   border: solid 2px var(--text);
   color: var(--text);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--primary-1);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--primary-1);
+}
+
+.PhoneInputCountry {
+  margin-top: -15px;
+}
+
+/* Remove Mobile Device auto-zoom on Inputs */
+
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+select:focus,
+textarea {
+  font-size: 16px;
+}
+
+/*inspired by Frederico Dossena (fdossena.com)*/
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
 }

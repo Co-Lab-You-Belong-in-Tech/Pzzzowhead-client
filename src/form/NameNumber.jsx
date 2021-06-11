@@ -4,27 +4,32 @@ import PropTypes from 'prop-types'
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css'
 
-const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
+import styles from '../styles/NameAndNumber.module.css'
+
+const NameNumber = ({sendSubmission, phoneNumber, setPhoneNumber, userName, setUserName}) => {
 
   const history = useHistory();
 
   const navigateToSleepSetup = () => {
-    history.push('/form/sleepsetup')
+    setTimeout(() => {
+      sendSubmission();
+      history.push('/form/celebrate')
+    }, 400);
   };
 
   return (
     <>
-      <div className="name-number-card form">
-      <h2>Those digits.</h2>
-        <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>
-        <p>Let's create your custom sleep schedule.</p>
-        <div className="name-number-inputs">
-          <label>
-              Name:
-                <input  type="text" name="" value={userName} onChange={setUserName} placeholder="Your Name"/>
-            </label>
-              
-              <PhoneInput
+      <div className={styles.nameNumberContainer}>
+        <div>
+          <h2>Those digits ☎️</h2>
+          <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>
+        </div>
+        <div className={styles.inputs}>
+          <p className={styles.label}>Name</p>
+          <input  className={styles.nameInput} type="text" name="" value={userName} onChange={setUserName} placeholder="John Doe"/>
+            
+          <p className={styles.label}>Phone</p>
+          <PhoneInput
                 international
                 defaultCountry="CA"
                 value={phoneNumber}
@@ -38,6 +43,7 @@ const NameNumber = ({phoneNumber, setPhoneNumber, userName, setUserName}) => {
 }
 
 NameNumber.propTypes = {
+  sendSubmission: PropTypes.func.isRequired,
   phoneNumber: PropTypes.string,
   setPhoneNumber: PropTypes.func.isRequired,
   userName: PropTypes.string,

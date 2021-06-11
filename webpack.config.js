@@ -85,7 +85,7 @@ module.exports = {
         exclude: /\.module\.css$/
       },
       {
-        test: /\.(jpeg|jpg|png|svg)$/,
+        test: /\.(jpeg|jpg|png|svg|gif)$/,
         use: {
           loader: 'url-loader',
           options: { limit: 1000 },

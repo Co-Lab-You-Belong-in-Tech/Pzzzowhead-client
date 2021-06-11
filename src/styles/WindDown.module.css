@@ -1,0 +1,67 @@
+.windDownContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  padding: 3rem 7vw;
+  h2 {
+    width: 95%;
+    text-align: left;
+    color: var(--primary-1);
+    margin-bottom: 1rem;
+  }
+  img {
+    padding: 3rem 0;
+  }
+  em {
+    color: var(--primary-1);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  input {
+    font-family: var(--content-font);
+    font-size: larger;
+    height: 50px;
+    color: var(--primary-1);
+    background-color: var(--primary-2);
+    border-radius: 1.4rem;
+    border: solid 2px var(--primary-1);
+    margin-bottom: 0.8rem;
+  }
+  .windDown {
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+  }
+  label {
+    font-family: var(--content-font);
+    font-size: large;
+    padding: 0.5rem 1.3rem;
+    color: var(--primary-2);
+    background-color: var(--default);
+    border-radius: 1.4rem;
+    margin-right: 10px;
+  }
+
+  .radio {
+    display: none;
+  }
+  .radio:checked + label {
+    background-color: var(--text);
+  }
+  button {
+    width: 75vw;
+    font-size: 1.4rem;
+    align-self: center;
+  }
+}

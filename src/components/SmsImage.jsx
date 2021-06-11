@@ -17,8 +17,9 @@ import faceTwo from '../assets/iPhone_Mockup/face_2.png';
 
 const SmsImage = () => {
   useEffect(() => {
-    Aos.init({duration: 1000, 
-      delay: 800 
+    Aos.init({duration: 500, 
+      delay: 800,
+      anchorPlacement: 'bottom-top' 
     });
   }, [])
   return (

@@ -15,7 +15,7 @@ require('aos/dist/aos.css');
 
 const LandingPage = () => {
   useEffect(() => {
-    Aos.init({ duration: 600 });
+    Aos.init({ duration: 500, anchorPlacement: 'top-top' });
   }, []);
 
   const history = useHistory();
@@ -31,11 +31,11 @@ const LandingPage = () => {
       <section className={styles.titleContainer}>
         <img className={styles.landingImage} src={landingImage} alt="pzzzow head landing page image" />
         <h2
-          className={styles.mainTitle}>pzzzow talk</h2>
+          className={styles.mainTitle}>pzzzow head</h2>
       </section>
       <div className={styles.introContainer}>
         <h1 data-aos="fade" 
-          data-aos-duration="300"> I'm Pizzow - your personal sleep text bot. </h1>
+          data-aos-duration="300"> I'm Pzzzow - your personal sleep text bot. </h1>
         <p data-aos="fade-up" 
           data-aos-duration="800"
           data-aos-delay="5"> I'm <strong>NOT</strong> a boring sleep alarm- cause you snooze that <strong>s***</strong> and watch Youtube. With me, you watch Youtube guilt free. And get 8 hours of sleep.</p>
@@ -74,8 +74,9 @@ const LandingPage = () => {
         </div>
         <button 
           data-aos="fade-left" 
-          data-aos-duration="2000"
+          data-aos-duration="1000"
           data-aos-easing="ease-in-out-sine"
+          data-aos-anchor-placement="top-bottom"
           className={styles.tryItNowButtonBottom} onClick={navigateToForm}>Try it now!</button>
       </section>
       <footer style={{ display: 'none'}}>This is the footer for Pzzzowhead</footer>
