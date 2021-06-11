@@ -30,17 +30,19 @@ const WindDown = ({ windDownLength, setWindDownLength, bedTimeAlarm, setWindDown
           <p className={styles.label}>How much downtime do you want each night?</p>
             <div className={styles.windDown}>
                 <input
+                  id="wind-1"
                   type="radio"
                   name="wind-downs"
                   value="1 hour"
                   onChange={setWindDownLength}
                   className={styles.radio}
                   />
-                <label>
+                <label htmlFor="wind-1">
                 1 hr
                 </label>
               
                 <input
+                id="wind-1.5"
                   defaultChecked
                   type="radio"
                   name="wind-downs"
@@ -48,30 +50,31 @@ const WindDown = ({ windDownLength, setWindDownLength, bedTimeAlarm, setWindDown
                   onChange={setWindDownLength}
                   className={styles.radio}
                 />
-                <label>
+                <label htmlFor="wind-1.5">
                 1.5 hrs
               </label>
               
                 <input
+                id="wind-2"
                   type="radio"
                   name="wind-downs"
                   value="2 hours"
-
                   onChange={setWindDownLength}
                   className={styles.radio}
                 />
-                <label>
+                <label htmlFor="wind-2">
                 2 hrs
               </label>
               
                 <input
+                id="wind-3"
                   type="radio"
                   name="wind-downs"
                   value="3 hours"
                   onChange={setWindDownLength}
                   className={styles.radio}
                 />
-                <label>
+                <label htmlFor="wind-3">
                 other
               </label>
             </div>
