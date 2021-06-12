@@ -61,7 +61,7 @@ button:active {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 4vh 7vw 6vh 7vw;
+  margin: 9vh 7vw 9vh 7vw;
 }
 
 .PhoneInputCountry {
