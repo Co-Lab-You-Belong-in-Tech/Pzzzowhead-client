@@ -19,7 +19,7 @@ const NameNumber = ({sendSubmission, phoneNumber, setPhoneNumber, userName, setU
 
   return (
     <>
-      <div className={styles.nameNumberContainer}>
+      <div className={`${styles.nameNumberContainer} formContainer`}>
         <div>
           <h2>Those digits ☎️</h2>
           <p>I'll text you reminders for your wind down and bed time. You can text 'STOP' to opt out.</p>

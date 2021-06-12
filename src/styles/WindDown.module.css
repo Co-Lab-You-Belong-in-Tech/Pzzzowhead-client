@@ -1,15 +1,14 @@
 .windDownContainer {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: left;
-  padding: 3rem 7vw;
+  padding: 2vh;
   h2 {
     width: 95%;
     text-align: left;
     color: var(--primary-1);
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   img {
     padding: 3rem 0;
@@ -38,7 +37,6 @@
     margin-bottom: 0.8rem;
   }
   .windDown {
-    width: 100vw;
     display: flex;
     justify-content: flex-start;
     margin-bottom: 3rem;

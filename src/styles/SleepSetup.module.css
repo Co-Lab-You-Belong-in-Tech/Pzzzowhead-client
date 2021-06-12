@@ -9,7 +9,7 @@
     width: 95%;
     text-align: left;
     color: var(--primary-1);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
   img {
     padding: 3rem 0;
@@ -36,12 +36,12 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   .hours {
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
   label {
     font-family: var(--content-font);

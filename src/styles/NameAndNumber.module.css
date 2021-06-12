@@ -1,15 +1,12 @@
 .nameNumberContainer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding: 4rem 7vw;
+  padding: 4vh 3vw;
+  align-items: flex-start;
 
   h2 {
     width: 95%;
     text-align: left;
     color: var(--primary-1);
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   p {

@@ -20,7 +20,7 @@ const WindDown = ({ windDownLength, setWindDownLength, bedTimeAlarm, setWindDown
 
   return (
     <>
-      <div className={styles.windDownContainer}>
+      <div className={`${styles.windDownContainer} formContainer`}>
         <div>
           <h2>Wind it down. 😪</h2>
           <p>Next, let's set some time before bed to wind down</p>
