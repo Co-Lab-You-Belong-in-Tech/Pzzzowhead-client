@@ -18,7 +18,7 @@ const Pzzzownality = ({ personality, setPersonality }) => {
 
   return (
     <>
-      <div className={styles.pzzzownalityContainer}>
+      <div className={`${styles.pzzzownalityContainer} formContainer`}>
         <div>
           <h2>Pick your pzzzow.</h2>
           <p>Pick the type of <em>pzzzow</em> personality you would like to receive texts from.</p>

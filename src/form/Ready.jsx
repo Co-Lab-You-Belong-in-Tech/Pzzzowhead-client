@@ -23,7 +23,7 @@ const Ready = () => {
 
   return (
     <>
-      <div className={styles.readyContainer}>
+      <div className={`${styles.readyContainer} formContainer`}>
         <h2 data-aos="fade-in"> Ready to sleep Earlier?</h2>
         <img data-aos="fade-in" data-aos-duration="1000" src={readyGif} alt="ready-pic" />
         <p data-aos="fade-in" >I'm your personal textbot, <em >pzzzow</em> and will be texting you wind-down and bedtime reminders!</p>

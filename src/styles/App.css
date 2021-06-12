@@ -54,6 +54,16 @@ button:active {
   color: var(--primary-1);
 }
 
+.formContainer {
+  height: 82vh;
+  width: 86vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 9vh 7vw 9vh 7vw;
+}
+
 .PhoneInputCountry {
   margin-top: -15px;
 }

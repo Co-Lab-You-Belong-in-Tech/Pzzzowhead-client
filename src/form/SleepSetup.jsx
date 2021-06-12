@@ -27,7 +27,7 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
 
   return (
     <>
-    <div className={styles.sleepSetupContainer}>
+    <div className={`${styles.sleepSetupContainer} formContainer`}>
       <div>
         <h2>Time Flies ⏰...</h2>
         <p>Let's configure your bedtime next!</p>
