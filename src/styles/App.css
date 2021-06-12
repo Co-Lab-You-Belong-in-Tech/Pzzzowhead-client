@@ -55,7 +55,7 @@ button:active {
 }
 
 .formContainer {
-  height: 88vh;
+  height: 82vh;
   width: 86vw;
   display: flex;
   flex-direction: column;
