@@ -15,7 +15,7 @@ require('aos/dist/aos.css');
 
 const LandingPage = () => {
   useEffect(() => {
-    Aos.init({ duration: 500, anchorPlacement: 'top-top' });
+    Aos.init({ duration: 500, anchorPlacement: 'top-bottom' });
   }, []);
 
   const history = useHistory();
@@ -23,7 +23,7 @@ const LandingPage = () => {
   const navigateToForm = () => {
     setTimeout(() => {
       history.push('/form/ready')
-    }, 400);
+    }, 200);
   };
 
   return (
@@ -31,6 +31,8 @@ const LandingPage = () => {
       <section className={styles.titleContainer}>
         <img className={styles.landingImage} src={landingImage} alt="pzzzow head landing page image" />
         <h2
+        data-aos="fade-down"
+        data-aos-ease="ease-in-cubic"
           className={styles.mainTitle}>pzzzow head</h2>
       </section>
       <div className={styles.introContainer}>
@@ -42,7 +44,7 @@ const LandingPage = () => {
         <button data-aos="fade-right" 
           data-aos-delay="900"
           data-aos-duration="2400"
-          className={styles.tryItNowButton} onClick={navigateToForm}>Try it now!</button>
+          onClick={navigateToForm}>Try it now!</button>
       </div>
       <section className={styles.explainContainer}>
         <SmsImage />

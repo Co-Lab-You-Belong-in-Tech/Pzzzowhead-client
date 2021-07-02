@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 60vh;
+  min-height: 300px;
   .smsContainer {
     z-index: 4;
     position: relative;
@@ -42,6 +43,7 @@
   .phoneScreen {
     position: absolute;
     padding-right: 54px;
+    height: 90%;
   }
   .clockEmoji {
     position: relative;

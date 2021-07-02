@@ -6,27 +6,53 @@
 
 .titleContainer {
   height: calc(100vw / (362 / 210));
+  max-height: 560px;
 }
 .landingImage {
-  width: 100%;
+  height: calc(100vw / (362 / 210));
+  max-height: 560px;
   position: absolute;
-  object-fit: cover;
+  margin: auto;
+  opacity: 90%;
+}
+@media screen and (min-width: 943px) {
+  .landingImage {
+    left: calc((100vw - 943px) / 2);
+  }
 }
 
 .mainTitle {
-  padding-top: 8%;
+  padding-top: 0.7rem;
   padding-left: 8%;
-  position: relative;
+  position: absolute;
   z-index: 2;
+}
+@media screen and (min-width: 500px) {
+  .mainTitle {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (min-width: 650px) {
+  .mainTitle {
+    padding-top: 2rem;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 950px) {
+  .mainTitle {
+    padding-top: 3rem;
+    padding-left: calc(((100vw - 943px) / 2) + 3rem);
+    font-size: 4.5rem;
+  }
 }
 
 .introContainer {
-  padding: 2.5rem 7vw;
+  padding: 2.5rem 7vw 1.5rem;
   h1 {
     margin-bottom: 1rem;
   }
   button {
-    margin: 3rem 0;
+    margin: 1.5rem 0 0;
   }
 }
 
@@ -35,6 +61,7 @@
   padding-bottom: 2rem;
   img {
     width: 14vw;
+    max-width: 100px;
   }
   h2 {
     margin: 1rem 0;
