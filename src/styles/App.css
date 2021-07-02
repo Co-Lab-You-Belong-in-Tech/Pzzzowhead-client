@@ -64,6 +64,14 @@ button:active {
   margin: 9vh 7vw 9vh 7vw;
 }
 
+@media screen and (min-width: 900px) {
+  .formContainer {
+    margin-left: 15vw;
+    margin-right: 15vw;
+    width: 70vw;
+  }
+}
+
 .PhoneInputCountry {
   margin-top: -15px;
 }
