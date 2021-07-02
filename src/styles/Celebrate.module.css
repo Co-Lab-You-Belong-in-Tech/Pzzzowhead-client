@@ -31,3 +31,10 @@
     align-self: center;
   }
 }
+
+@media screen and (min-width: 1000px) {
+  .celebrateContainer {
+    margin-left: calc((100vw - 1000px) / 2);
+    margin-right: calc((100vw - 1000px) / 2);
+  }
+}
