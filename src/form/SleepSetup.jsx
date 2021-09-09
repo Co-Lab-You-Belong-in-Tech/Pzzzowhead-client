@@ -36,7 +36,7 @@ const SleepSetup = ({ sleepLength, setSleepLength, setWakeUpTime, timeInput, set
         <p className={styles.label}> Ideal Wake up time</p>
           <input name="wake-up-time" type="time"  value={timeInput} onChange={setTimeInput} />
 
-        <p className={styles.label}>When so you want sleep notifications?</p>
+        <p className={styles.label}>When do you want sleep notifications?</p>
         <div className={styles.weekday}> 
             <input 
             id="radio-1"
